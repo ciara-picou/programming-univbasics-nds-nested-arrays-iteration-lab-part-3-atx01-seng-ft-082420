@@ -12,7 +12,7 @@
     
 #     while inner_count < src[count].length do
 #     if src[count][inner_count].is_a? String
-#       string = string + src[count][inner_count]
+#       string = string + "" + src[count][inner_count]
 #       inner_count += 1
 #     end
 #     count += 1
@@ -29,12 +29,12 @@ def join_nested_strings(src)
     inner_count = 0
     
     while inner_count < src[count].length do
-     if src[count][inner_count].is_a? String
+    if src[count][inner_count].is_a? String
       string_array.push(src[count][inner_count])
-       inner_count += 1
-     end
-     count += 1
-   end
- end
- string_array.join("")
+      inner_count += 1
+    end
+    count += 1
+  end
+end
+string_array.join("")
 end
